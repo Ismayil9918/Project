@@ -6,7 +6,7 @@ namespace Console_Project.Enum
 {
     enum  Categories
     {
-        Programming,
+        Programming=1,
         Desing,
         SystemAdministration,
 
