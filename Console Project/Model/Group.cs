@@ -13,7 +13,7 @@ namespace Console_Project.Model
         public int Limit;       
         public Categories Category;
         public Student[] Students;
-        public Group(string fullname,string groupno, Categories category) 
+        public Group(Categories category, bool isonline) 
         {
 
             switch (category)
@@ -31,8 +31,15 @@ namespace Console_Project.Model
                     break;
             }
             Category = category;
-            Students = new Student[fullname, groupno];
-            
+            IsOnline=isonline;
+            if (IsOnline)
+            {
+                Limit = 10;
+            }
+            else
+            {
+                Limit = 15;
+            }            
         }
     }
 }
