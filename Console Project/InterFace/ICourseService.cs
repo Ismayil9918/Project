@@ -11,7 +11,7 @@ namespace Console_Project.InterFace
         
 
         public void NewGroup( Categories Category);
-        public void GroupList(string no, Categories Category,int limit);
+        public void GroupList();
         public void EditGroup(string no,string newno);
         public void GroupListStudents(string no);
         public void AllStudentList(string fullname, string no,bool isonline);

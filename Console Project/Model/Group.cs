@@ -41,5 +41,14 @@ namespace Console_Project.Model
                 Limit = 15;
             }            
         }
+
+        public override string ToString()
+        {
+            return $"Group NO: {No}\n" +
+                $"Is Online : {IsOnline}\n" +
+                $"Limit: {Limit}\n" +
+                $"Category: {Category}\n";
+
+        }
     }
 }

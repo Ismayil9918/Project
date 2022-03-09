@@ -14,7 +14,8 @@ namespace Console_Project
         { 
             get
             {
-                return _groups;
+                return _groups;                   
+
             } 
         }
 
@@ -33,14 +34,11 @@ namespace Console_Project
             throw new NotImplementedException();
         }
 
-        public void GroupList(string no, Categories Category, int limit)
-        {
-            throw new NotImplementedException();
-        }
+        //public List<Group> GroupList() => _groups;
 
         public void GroupListStudents(string no)
         {
-            throw new NotImplementedException();
+           
         }
 
         public void NewGroup( Categories Category)
@@ -89,6 +87,19 @@ namespace Console_Project
             }
             return category;
             
+        }
+
+        public void GroupList()
+        {
+            foreach (Group group in Groups)
+            {
+                Console.WriteLine(group);
+            }
+        }
+
+        public void CreatedStudent(string fullname, string groupno, bool type)
+        {
+            throw new NotImplementedException();
         }
     }
 }

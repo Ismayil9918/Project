@@ -9,7 +9,7 @@ namespace Console_Project.Model
         public string Fullname;
         public string  GroupNo;
         public bool Type;
-        public Student(string fullname, string groupno)
+        public Student(string fullname, string groupno) 
         {
             Fullname=fullname;
             GroupNo=groupno;
