@@ -15,6 +15,6 @@ namespace Console_Project.InterFace
         public void EditGroup(string no,string newno);
         public void GroupListStudents(string no);
         public void AllStudentList(string fullname, string no,bool isonline);
-        public void CreatedStudent(string fullname,string groupno,bool type);
+        public void CreateStudent(string fullname,string groupno,bool type);
     }
 }

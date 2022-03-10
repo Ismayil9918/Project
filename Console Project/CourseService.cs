@@ -14,7 +14,7 @@ namespace Console_Project
         { 
             get
             {
-                return _groups;                   
+                return _groups;                    
 
             } 
         }
@@ -24,9 +24,13 @@ namespace Console_Project
             throw new NotImplementedException();
         }
 
-        public void CreatStudent(string fullname, string groupno, bool type)
+        public void CreateStudent(string groupname, string studentname, bool type)
         {
-            throw new NotImplementedException();
+            Group group = Findgroup(groupname);
+            Student student = new Student(studentname,type);
+            student.GroupNo = group.No;
+            Array.Resize(ref group.Students, group.Students.Length + 1);
+            group.Students[group.Students.Length - 1] = student;
         }
 
         public void EditGroup(string no, string newno)
@@ -37,8 +41,11 @@ namespace Console_Project
         //public List<Group> GroupList() => _groups;
 
         public void GroupListStudents(string no)
-        {
-           
+        {Group group=Findgroup(no);
+            foreach (var item in group.Students)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         public void NewGroup( Categories Category)
@@ -57,7 +64,7 @@ namespace Console_Project
             bool isonline = false;
             if (answer=="1")
             {
-                isonline = true;
+                isonline = true; 
             }
             else if (answer == "2")
             {
@@ -96,10 +103,17 @@ namespace Console_Project
                 Console.WriteLine(group);
             }
         }
-
-        public void CreatedStudent(string fullname, string groupno, bool type)
-        {
-            throw new NotImplementedException();
+        
+        public Group Findgroup(string number)
+        {Group group = null;
+            foreach (var item in _groups)
+            {
+                if (number==item.No)
+                {
+                    group = item;
+                }
+            }
+            return group;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Console_Project.Model
         public bool IsOnline;
         public int Limit;       
         public Categories Category;
-        public Student[] Students;
+        public Student[0] Students;
         public Group(Categories category, bool isonline) 
         {
 
@@ -44,10 +44,7 @@ namespace Console_Project.Model
 
         public override string ToString()
         {
-            return $"Group NO: {No}\n" +
-                $"Is Online : {IsOnline}\n" +
-                $"Limit: {Limit}\n" +
-                $"Category: {Category}\n";
+            return $"Group NO: {No}\nIs Online : {IsOnline}\nLimit: {Limit}\nCategory: {Category}";
 
         }
     }
