@@ -41,7 +41,32 @@ namespace Console_Project
 
         public void EditGroup(string no, string newno)
         {
-           
+            Group existedgroup = Findgroup(no);
+            if (existedgroup == null)
+            {
+                Console.WriteLine("Please choose correct Group No");
+                return;
+            }
+            foreach (Group item in _groups)
+            {
+                if (existedgroup.No.ToLower().Trim() == newNo.ToLower().Trim()) ;
+                {
+                    Console.WriteLine("This group number already exist");
+                    return;
+                }
+            }
+            existedgroup.No = newno;
+
+
+            foreach (Group group1 in _groups)
+            {
+                if (group1.No.ToLower().Trim() == newno.ToLower().Trim()) ;
+                {
+                    Console.WriteLine(existedgroup = group1);
+                    return;
+                }
+            }
+            existedgroup.No = newno.ToUpper();
         }
 
     }
