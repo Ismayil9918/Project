@@ -1,0 +1,5 @@
+C:\Users\HP\Project\Console Project\Console Project\obj\Debug\netcoreapp3.1\Console Project.csproj.AssemblyReference.cache
+C:\Users\HP\Project\Console Project\Console Project\obj\Debug\netcoreapp3.1\Console Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Project\Console Project\Console Project\obj\Debug\netcoreapp3.1\Console Project.AssemblyInfoInputs.cache
+C:\Users\HP\Project\Console Project\Console Project\obj\Debug\netcoreapp3.1\Console Project.AssemblyInfo.cs
+C:\Users\HP\Project\Console Project\Console Project\obj\Debug\netcoreapp3.1\Console Project.csproj.CoreCompileInputs.cache

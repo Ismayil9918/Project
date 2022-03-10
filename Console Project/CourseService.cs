@@ -21,7 +21,13 @@ namespace Console_Project
 
         public void AllStudentList(string fullname, string no, bool isonline)
         {
-            throw new NotImplementedException();
+            foreach (var item in _groups)
+            {
+                foreach (var item1 in item.Students)
+                {
+                    Console.WriteLine(item1);
+                }
+            }
         }
 
         public void CreateStudent(string groupname, string studentname, bool type)
@@ -35,8 +41,10 @@ namespace Console_Project
 
         public void EditGroup(string no, string newno)
         {
-            throw new NotImplementedException();
+           
         }
+
+    }
 
         //public List<Group> GroupList() => _groups;
 
